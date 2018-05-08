@@ -6,3 +6,9 @@ Mystery Science Theater 3000 Quotes for the Discerning She-Creature
 *Not a sea-creature
 
 This package provides you with three select Mystery Science Theater 3000 (MST3K) quotes, as collated from: https://en.wikiquote.org/wiki/Mystery_Science_Theater_3000
+
+Simply type:
+`get_mst3k_quotes()`
+
+And get quoting!
+
