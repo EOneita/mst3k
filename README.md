@@ -11,4 +11,5 @@ Simply type:
 `get_mst3k_quotes()`
 
 And get quoting!
+![alternativetext](images/asia.jpg "")
 
