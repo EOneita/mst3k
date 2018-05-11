@@ -1,22 +1,15 @@
 #' Rowsdowser's Function (MST3K)
-#' 
+#'
 #' This function allows you to pull random snippets of Mystery Science Theater 3000 quotations
-#' @param id Choose a numeric id. Defaults to a random id
+#' @param none Defaults to three random consecutive quotes
 #' @keywords rowsdower
 #' @export
-#' @examples 
+#' @examples
 #' get_mst3k_quotes()
 
-get_mst3k_quotes <- function(id = sample(1:8106, 1)){
-  if(!(id%%1==0)){
-    stop("Error: id must be an integer")
-  }
-  if(!(id >= 1 & id <= 8106)){
-    stop("Error: id must be between 1 and 8106")
-  }
+get_mst3k_quotes <- function(){
   library(rvest)
   library(dplyr)
-  message("The id you are using is ", as.character(id))
   webpage <- read_html("https://en.wikiquote.org/wiki/Mystery_Science_Theater_3000")
   webpage
   results <- webpage %>% html_nodes(c("dl"))
