@@ -16,7 +16,7 @@ get_mst3k_quotes <- function(){
   results
   bold_result <- results
   bold_result %>% html_nodes("b")
-  quote_data <- xml_contents(bold_result) %>% html_text(trim = TRUE)
+  quote_data <- html_children(bold_result) %>% html_text(trim = TRUE)
   quote_data2 <- quote_data[!quote_data %in% ""]
   quote_data3 <- as.data.frame(quote_data2)
   quote_data3$quote_data2 <- as.character(quote_data3$quote_data2)
@@ -25,4 +25,3 @@ get_mst3k_quotes <- function(){
   #api_call <- sample_n(quote_data3, 3)
   return(api_call)
 }
-get_mst3k_quotes()
